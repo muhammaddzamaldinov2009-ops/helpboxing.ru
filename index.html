@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Учебный Помощник</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Unbounded:wght@300;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+<div class="study-counter"><div class="count" id="studyCount">0</div><div class="label">изучено тем</div></div>
+<div class="particles" id="particles"></div>
+<div class="toast-container" id="toastContainer"></div>
+
+<div class="container">
+  <header>
+    <h1>УЧЕБНЫЙ<br>ПОМОЩНИК</h1>
+    <p class="subtitle">Твой путеводитель в мире знаний</p>
+  </header>
+
+  <!-- SEARCH -->
+  <div class="search-wrap">
+    <input class="search-input" id="searchInput" type="text" placeholder="🔍  Поиск по правилам, формулам, теоремам...">
+    <span class="search-icon">🔎</span>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="subjects-nav">
+    <button class="subject-btn active" data-subject="math"><span>📐 Математика</span></button>
+    <button class="subject-btn" data-subject="algebra"><span>🔢 Алгебра</span></button>
+    <button class="subject-btn" data-subject="geometry"><span>📏 Геометрия</span></button>
+    <button class="subject-btn" data-subject="physics"><span>⚡ Физика</span></button>
+    <button class="subject-btn" data-subject="chemistry"><span>🧪 Химия</span></button>
+    <button class="subject-btn" data-subject="biology"><span>🧬 Биология</span></button>
+    <button class="subject-btn" data-subject="russian"><span>📚 Русский язык</span></button>
+    <button class="subject-btn" data-subject="english"><span>🇬🇧 English</span></button>
+    <button class="subject-btn" data-subject="history"><span>🏛️ История</span></button>
+    <button class="subject-btn" data-subject="geography"><span>🌍 География</span></button>
+    <button class="subject-btn" data-subject="informatics"><span>💻 Информатика</span></button>
+    <button class="subject-btn" data-subject="trigonometry"><span>📊 Тригонометрия</span></button>
+  </nav>
+
+  <div class="content-area">
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <h3>Разделы</h3>
+      <div id="sidebarCategories"></div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content" id="mainContent">
+      <!-- content injected by JS -->
+    </main>
+  </div>
+</div>
+
+<button class="random-fact-btn" id="randomFactBtn">💡</button>
+<button class="scroll-top" id="scrollTopBtn">↑</button>
+<div class="modal" id="factModal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h3>Интересный факт!</h3>
+    <p id="factText" style="color:#444;line-height:1.7;font-size:.92rem;"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
